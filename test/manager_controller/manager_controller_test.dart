@@ -5,7 +5,7 @@ import 'package:infleet_test/models/vehicle.dart';
 
 void main() {
   group('ManagerController', () {
-    test('deve adicionar uma plataforma corretamente', () {
+    test('should add a platform correctly', () {
       final managerController = ManagerController();
       final platform = Plataform(maxX: 5, maxY: 5);
 
@@ -15,7 +15,7 @@ void main() {
       expect(managerController.plataform.maxY, equals(5));
     });
 
-    test('deve enviar comandos para o veículo', () {
+    test('should send commands to the vehicle', () {
       final managerController = ManagerController();
       final platform = Plataform(maxX: 5, maxY: 5);
       managerController.plataform = platform;
@@ -28,7 +28,7 @@ void main() {
       expect(vehicle.direction, equals('N'));
     });
 
-    test('deve detectar colisão corretamente', () {
+    test('should detect collision correctly', () {
       final managerController = ManagerController();
       final platform = Plataform(maxX: 5, maxY: 5);
       managerController.plataform = platform;
