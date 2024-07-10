@@ -2,34 +2,34 @@
 
 Este projeto simula o controle de veículos autônomos da Tesla em Marte, em parceria com a SpaceX. Os veículos navegam por uma plataforma retangular, enviando informações sobre o terreno para a Terra. O controle é feito por coordenadas e comandos simples.
 
-## Getting Started
+## Primeiros Passos
 
-- Clone the repository:
+- Clone o repositório:
 
 ```bash
 https://github.com/PedroG47/infleet_test.git
 ```
 
-## Usage
+## Uso
 
-- Run the application:
+- Execute a aplicação:
 
 ```bash
 dart run lib/main.dart
 ```
 
-## Testing
+## Testes
 
-- To run tests
+- Para rodar os testes:
 
 ```bash
 flutter test
 ```
 
-## Structure
-The project is structured as follows:
+## Estrutura
+O projeto está estruturado da seguinte forma:
 
-- lib/models/: Contains the data models (Vehicle and Plataform).
-- lib/controller/: Contains the main business logic (ManagerController).
-- lib/services/: Handles input and output operations (InputService).
-- test/: Contains the test files 
+- lib/models/: Contém os modelos de dados (Vehicle and Plataform).
+- lib/controller/: Contém a lógica principal do negócio (ManagerController).
+- lib/services/: Lida com operações de input e output (InputService).
+- test/: Contém os arquivos de teste.
