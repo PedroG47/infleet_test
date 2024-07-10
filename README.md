@@ -1,6 +1,6 @@
-# infleet_test
+# 🤖 Infleet em Marte
 
-A new Flutter project.
+Este projeto simula o controle de veículos autônomos da Tesla em Marte, em parceria com a SpaceX. Os veículos navegam por uma plataforma retangular, enviando informações sobre o terreno para a Terra. O controle é feito por coordenadas e comandos simples.
 
 ## Getting Started
 
