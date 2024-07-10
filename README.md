@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-Clone the repository:
+- Clone the repository:
 
 ```bash
 https://github.com/PedroG47/infleet_test.git
@@ -15,7 +15,7 @@ https://github.com/PedroG47/infleet_test.git
 - Run the application:
 
 ```bash
-   dart run lib/main.dart
+dart run lib/main.dart
 ```
 
 ## Testing
@@ -23,7 +23,7 @@ https://github.com/PedroG47/infleet_test.git
 - To run tests
 
 ```bash
-   flutter test
+flutter test
 ```
 
 ## Structure
