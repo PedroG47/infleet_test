@@ -41,7 +41,7 @@ class InputService {
     final x = int.tryParse(parts[0]);
     final y = int.tryParse(parts[1]);
 
-    if (x == null || y == null || x < 0 || y < 0) return null;
+    if (x == null || y == null) return null;
 
     return [x, y];
   }
@@ -68,25 +68,32 @@ class InputService {
     if (positionInput == 'sair') return null;
 
     if (positionInput != null) {
-      final position = positionInput.split(' ');
-      if (position.length == 3) {
-        final x = int.tryParse(position[0]);
-        final y = int.tryParse(position[1]);
-        final direction = position[2].toUpperCase();
-
-        if (x != null && y != null && validDirections.contains(direction)) {
-          return Vehicle(
-            id: managerController.vehicles.length + 1,
-            x: x,
-            y: y,
-            direction: direction,
-          );
-        }
-      }
+     return buildVehicle(positionInput, managerController.vehicles);
     }
 
     print('Entrada inválida para a posição inicial do veículo.');
     return getVehicleDetails(managerController);
+  }
+
+  Vehicle? buildVehicle(String position, List<Vehicle> vehicles) {
+    final parts = position.split(' ');
+    if (parts.length != 3) return null;
+
+    final x = int.tryParse(parts[0]);
+    final y = int.tryParse(parts[1]);
+    final direction = parts[2].toUpperCase();
+
+    if (x == null || y == null || !validDirections.contains(direction)) {
+      print('Posição inicial inválida.');
+      return null;
+    }
+
+    return Vehicle(
+      id: vehicles.length + 1,
+      x: x,
+      y: y,
+      direction: direction,
+    );
   }
 
   String? getVehicleCommands() {

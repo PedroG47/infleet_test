@@ -5,14 +5,14 @@ class ManagerController {
   final List<Vehicle> vehicles = [];
   Plataform? _plataform;
 
-  Plataform get plataform => _plataform!;
-  set plataform(Plataform plataform) => _plataform = plataform;
+  Plataform? get plataform => _plataform;
+  set plataform(Plataform? plataform) => _plataform = plataform;
 
   sendCommand(String command, Vehicle vehicle) {
     switch (command) {
       case 'M':
         if (!vehicle.vectorMove(
-            plataform.maxX, plataform.maxY, checkCollision)) {
+            plataform!.maxX, plataform!.maxY, checkCollision)) {
           return false;
         }
         break;

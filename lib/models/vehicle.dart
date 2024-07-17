@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 class Vehicle {
   final int id;
   int x;
@@ -94,5 +95,10 @@ class Vehicle {
   @override
   int get hashCode {
     return id.hashCode ^ x.hashCode ^ y.hashCode ^ direction.hashCode;
+  }
+
+  @override
+  String toString() {
+    return '(id: $id, x: $x, y: $y, direction: $direction)';
   }
 }
